@@ -1,3 +1,5 @@
+//main or calculation section
+
 const result = document.querySelector(".result");
 const equation = document.querySelector(".equation");
 const buttons = document.querySelectorAll("button");
@@ -21,6 +23,42 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 
+// menu section
 
+const openBtn = document.getElementById("open-btn");
+const closeBtn = document.getElementById("close-btn");
+const menu = document.querySelector(".menu");
+
+function showMenu() {
+  openBtn.addEventListener("click", () => {
+    menu.classList.add("menu-open");
+    closeBtn.style.visibility = "visible";
+    openBtn.style.visibility = "hidden";
+  });
+}
+showMenu();
+
+function hideMenu() {
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("menu-open");
+    closeBtn.style.visibility = "hidden";
+    openBtn.style.visibility = "visible";
+  });
+}
+hideMenu();
+
+
+// changing theme section
+
+const themeStyle = document.getElementById("theme-style");
+const darkThemeBtn = document.getElementById("dark-btn");
+const lightThemeBtn = document.getElementById("light-btn");
+
+darkThemeBtn.addEventListener("click", () => {
+  themeStyle.href = "style.css";
+})
+lightThemeBtn.addEventListener("click", () => {
+  themeStyle.href = "light-style.css";
+})
 
 
